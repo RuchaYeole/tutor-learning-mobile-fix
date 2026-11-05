@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tutor-contrib-learningmobilefix"
+version = "19.0.0"
+description = "Tutor plugin for improving Open edX Learning MFE mobile responsiveness"
+requires-python = ">=3.8"
+dependencies = [
+    "tutor>=19.0.0,<20.0.0",
+    "tutor-mfe>=19.0.0,<20.0.0",
+]
+
+[project.entry-points."tutor.plugin.v1"]
+learningmobilefix = "tutorlearningmobilefix.plugin"
+
+[tool.setuptools.packages.find]
+include = ["tutorlearningmobilefix*"]
+
